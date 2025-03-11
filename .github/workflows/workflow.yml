@@ -22,14 +22,14 @@ jobs:
         run: |
           echo "OPEN_AI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env.dev
           echo "UPSTAGE_API_KEY=${{ secrets.UPSTAGE_API_KEY }}" >> .env.dev
-          echo "GEMINI_API_KEY=${{ secrets.UPSTAGE_API_KEY }}" >> .env.dev
+          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" >> .env.dev
 
           dart run build_runner build
 
           rm -rf .env.dev
 
       # - run: flutter build web --base-href "/" --web-renderer html --release
-      - run: flutter build web --base-href "/" --web-renderer canvaskit --release
+      - run: flutter build web --base-href "/" --web-renderer=canvaskit --release
 
       - run: pwd
       - run: cd ./build/web
