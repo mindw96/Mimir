@@ -334,7 +334,6 @@ class ImageMessage extends StatelessWidget {
         height: MediaQuery.of(context).size.width * 0.5,
         width: MediaQuery.of(context).size.width * 0.5,
         fitWeb: BoxFitWeb.cover,
-        fullScreen: true,
         onPointer: true,
         onError:
             const Icon(Icons.error, color: Color.fromARGB(255, 245, 240, 183)),
@@ -354,7 +353,6 @@ class ImageMessage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.8,
                   // fullScreen: true,
                   onPointer: true,
-                  fullScreen: true,
                   onTap: () {
                     Navigator.pop(context);
                   },
